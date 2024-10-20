@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .section {
     display: none;
 }
@@ -11,40 +10,14 @@
 .section.active {
     display: block;
 }
-#about {
-    text-align: center; 
-    padding-top: 50px;  
-}
-#about p {
-    padding-bottom: 20px;
-}
-#about h2 {
-    font-size: 36px; 
-    font-weight: bold;
-}
 
-#about ul {
-    display: inline-block; 
-    text-align: left; 
-    margin-top: 20px; 
-}
-#skills h2 {
-    padding-top: 20px;
-}
 
-#experience h2{
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* Body styling */
 body {
     font-family: Arial, sans-serif;
     display: flex;
     min-height: 100vh;
     background-color: #f4f4f4;
     color: #333;
-    margin: 0;
 }
 
 .navbar {
@@ -60,6 +33,7 @@ body {
 .navbar ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
 .navbar ul li {
@@ -80,23 +54,42 @@ body {
 }
 
 .content {
-    margin-left: 220px; 
+    margin-left: 200px;
     padding: 20px;
-    width: calc(100% - 220px);
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-header, section {
+.section {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
     margin-bottom: 40px;
 }
 
-h1, h2 {
+h2 {
     color: #2c3e50;
     margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 ul {
+    text-align: left;
     margin-bottom: 20px;
-    line-height: 1.6;
     padding-left: 20px;
 }
 
@@ -104,20 +97,11 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* Footer styling */
-footer {
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #7f8c8d;
+.skills, .experience-item {
+    margin-top: 20px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .content {
-        margin-left: 0;
-        width: 100%;
-    }
-
     .navbar {
         width: 100%;
         height: auto;
@@ -127,5 +111,10 @@ footer {
     .navbar ul li {
         display: inline-block;
         margin-right: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
     }
 }
