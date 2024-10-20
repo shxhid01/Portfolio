@@ -12,7 +12,6 @@
     <nav class="navbar">
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#project">Projects</a></li>
             <li><a href="#extracurricular">Extracurricular</a></li>
@@ -22,44 +21,37 @@
 
     <!-- Main content container -->
     <div class="content">
-        <!-- Header Section -->
-        <header>
-            <h1>Shahid Hussain</h1>
-            <p>Welcome to my portfolio! Explore my projects, skills, and experience.</p>
-        </header>
-
         <!-- About Me Section -->
-        <section id="about">
-            <h2>About Me</h2>
+        <section id="about" class="section">
+            <h2>Shahid Hussain</h2>
             <p>I am a Bachelor of Mathematics and Computer Science student at the University of Adelaide, graduating in 2026.</p>
             <p>I have a strong interest in programming, data science, and software development.</p>
-        </section>
 
-        <!-- Skills Section -->
-        <section id="skills">
+    <div class = "skills">
             <h2>Skills</h2>
             <ul>
                 <li>Programming Languages: MATLAB, C, C++, HTML, CSS</li>
                 <li>Developer Tools: Git, Figma, GitHub, VS Code, Visual Studio, WSL, Qt/Qt Charts</li>
             </ul>
         </section>
-
+    </div>
         <!-- Experience Section -->
-        <section id="experience">
+        <section id="experience" class="section">
             <h2>Experience</h2>
             <div>
-                <h3>Tutor | Student Learning Hub (May 2022 – Sep 2023)</h3>
-                <p>Provided personalized tutoring, helping students improve grades significantly through tailored sessions.</p>
-                <p>Collaborated with teachers to align sessions with classroom curriculum.</p>
+                <h3>Tutor | Student Learning Hub </h3>
+                <li>Tailored one-on-one tutoring sessions to match each student's learning style, simplifying complex concepts and focusing on areas of difficulty.</li>
+                <li>Guided students through problem-solving techniques and practice exercises, leading to significant improvements in their grades—from Cs to Bs and from Bs to As.</li>
+                <li>Collaborated with teachers to align tutoring sessions with classroom curriculum and address specific areas of difficulty.</li>
             </div>
         </section>
 
         <!-- Project Section -->
-        <section id="project">
+        <section id="project" class="section">
             <h2>Projects</h2>
 
             <div>
-                <h3>Stock Trading Bot Simulation | C++, Qt Creator (2024 – Oct 2024)</h3>
+                <h3>Stock Trading Bot Simulation | C++, Qt Creator </h3>
                 <ul>
                     <li>Developed a stock trading simulation application using C++ and Qt, featuring automated buy/sell actions based on predefined criteria and real-time stock graph visualization.</li>
                     <li>Implemented a custom trading bot to handle trading decisions, portfolio tracking, and historical data management, automating the trade process based on simulated market conditions.</li>
@@ -69,7 +61,7 @@
             </div>
 
             <div>
-                <h3>Arcade Game | MATLAB (Mar. 2024 – Apr. 2024)</h3>
+                <h3>Arcade Game | MATLAB </h3>
                 <ul>
                     <li>Developed a multi-game arcade project using MATLAB, featuring popular classics like Battleship, Blackjack, and a Number Guessing Game.</li>
                     <li>Optimized code for efficiency and readability, ensuring smooth gameplay and ease of maintenance.</li>
@@ -77,7 +69,7 @@
             </div>
 
             <div>
-                <h3>E-Portfolio | HTML, CSS, GIT, FIGMA (Jun 2021 – Aug 2021)</h3>
+                <h3>E-Portfolio | HTML, CSS, GIT, FIGMA </h3>
                 <ul>
                     <li>Designed and prototyped the user interface in Figma, creating a visually appealing and intuitive layout that highlights key projects, language proficiencies, and personal information.</li>
                     <li>Self-taught in HTML, CSS, and Figma, demonstrating a proactive approach to learning and applying new skills to real-world projects.</li>
@@ -87,7 +79,7 @@
         </section>
 
         <!-- Extracurricular Section -->
-        <section id="extracurricular">
+        <section id="extracurricular" class="section">
             <h2>Extracurricular Activities</h2>
             <div>
                 <h3>Events Officer | Computer Science Club</h3>
@@ -103,7 +95,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="section">
             <h2>Contact</h2>
             <ul>
                 <li>Email: <a href="mailto:Shahid2677@hotmail.com">Shahid2677@hotmail.com</a></li>
@@ -113,23 +105,34 @@
                 <li>Resume: <a href="/Shahid Resume.pdf" target="_blank">Download Resume</a></li>
             </ul>
         </section>
-
-        <!-- Footer Section -->
-        <footer>
-            <p>&copy; 2024 Shahid Hussain. All rights reserved.</p>
-        </footer>
     </div>
-
     <script>
-        // Smooth scrolling to sections
-        document.querySelectorAll('.navbar a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        // Show only the "About Me" section by default
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#about').classList.add('active');
+});
+
+// Smooth scrolling and hiding other sections
+document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Get the target section ID
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        
+        // Hide all sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
         });
+        
+        // Show the target section with smooth scrolling
+        targetSection.classList.add('active');
+        targetSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
     </script>
 </body>
 </html>
