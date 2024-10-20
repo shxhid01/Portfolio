@@ -106,13 +106,13 @@
             </ul>
         </section>
     </div>
+
+    
     <script>
-        // Show only the "About Me" section by default
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#about').classList.add('active');
 });
 
-// Smooth scrolling and hiding other sections
 document.querySelectorAll('.navbar a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -125,7 +125,6 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
             section.classList.remove('active');
         });
         
-        // Show the target section with smooth scrolling
         targetSection.classList.add('active');
         targetSection.scrollIntoView({
             behavior: 'smooth'

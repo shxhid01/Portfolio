@@ -1,34 +1,41 @@
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Initially hide all sections */
 .section {
     display: none;
 }
 
-/* Show the active section */
 .section.active {
     display: block;
 }
-/* Center the About Me and Skills content horizontally and position them near the top */
 #about {
-    text-align: center; /* Center text horizontally */
-    padding-top: 50px;  /* Adds space from the top of the page, adjust if needed */
+    text-align: center; 
+    padding-top: 50px;  
 }
-
+#about p {
+    padding-bottom: 20px;
+}
 #about h2 {
-    font-size: 36px; /* Your desired font size */
+    font-size: 36px; 
     font-weight: bold;
 }
 
 #about ul {
-    display: inline-block; /* Makes the Skills list behave like inline content */
-    text-align: left; /* Ensures the list items are left-aligned */
-    margin-top: 20px; /* Adds space between the About info and Skills */
+    display: inline-block; 
+    text-align: left; 
+    margin-top: 20px; 
+}
+#skills h2 {
+    padding-top: 20px;
+}
+
+#experience h2{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* Body styling */
 body {
@@ -40,7 +47,6 @@ body {
     margin: 0;
 }
 
-/* Left-side Navigation Bar */
 .navbar {
     position: fixed;
     top: 0;
@@ -73,14 +79,12 @@ body {
     background-color: #34495e;
 }
 
-/* Content section styling */
 .content {
-    margin-left: 220px; /* Space for the navbar */
+    margin-left: 220px; 
     padding: 20px;
     width: calc(100% - 220px);
 }
 
-/* Header and section styling */
 header, section {
     margin-bottom: 40px;
 }
