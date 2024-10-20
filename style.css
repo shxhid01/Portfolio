@@ -101,6 +101,65 @@ ul li {
     margin-top: 20px;
 }
 
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#contact ul li {
+    margin-bottom: 15px;
+}
+
+#contact ul li a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contact ul li a:hover {
+    color: #ba34db;
+}
+
+
+.project-item {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.project-item h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.project-item ul {
+    padding-left: 20px;
+}
+
+.project-item li {
+    margin-bottom: 10px;
+}
+
+/* Adjust spacing for all sections */
+.section {
+    padding: 40px 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-padding-top: 20px; /* Adjust this value to match your navbar height */
+}
+
 @media (max-width: 768px) {
     .navbar {
         width: 100%;
