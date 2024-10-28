@@ -105,8 +105,22 @@ ul li {
 #contact ul li a:hover {
     color: #ba34db;
 }
+
+.project-item h3 a {
+    color: #2c3e50; /* Default color */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.project-item h3 a:hover {
+    color: #ba34db; /* Hover color */
+}
+
+.project-item h3 a:visited {
+    color: #2c3e50; /* Ensure visited links remain the default color */
+}
+
 .events-officer {
-    margin-bottom: 40px; /* Adjust to desired spacing */
+    margin-bottom: 40px;
 }
 .project-item {
     margin-bottom: 40px;
