@@ -147,6 +147,13 @@ html {
 body {
     scroll-padding-top: 20px;
 }
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
 @media (max-width: 768px) {
     .navbar {
         width: 100%;
