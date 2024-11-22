@@ -1,110 +1,64 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahid Hussain - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#extracurricular">Extracurricular</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <header>
+      <nav>
+          <a href="#about">About Me</a>
+          <a href="#projects">Projects</a>
+          <a href="#extracurricular">Extracurricular</a>
+          <a href="#contact">Contact</a>
+      </nav>
+  </header>
 
-    <main class="content">
-        <section id="about" class="section">
-            <h2>Shahid Hussain</h2>
-            <img src="/pfp.png" alt="Shahid Hussain" style="width: 500px;  margin-bottom: 20px;">
-            <p>Hey there, I'm a second year computer science student studying at the University of Adelaide. 
-                I love expressing creativity through making apps and developing my problem solving skills through competitive programming.</p>
-            <p>I have a strong interest in programming, data science, and software development.</p>
-            <div class="skills">
-                <h3>Skills</h3>
-                <ul>
-                    <li>Programming Languages: MATLAB, C, C++, HTML, CSS</li>
-                    <li>Developer Tools: Git, Figma, GitHub, VS Code, Visual Studio, WSL, Qt/Qt Charts</li>
-                </ul>
-            </div>
-        </section>
+  <div class="container about" id="about">
+      <h1>About Me</h1>
+      <img src="pfp.png" alt="Profile Picture">
+      <p>Hey 👋 I'm Shahid, a second-year Computer Science student.</p>
+      <p>I love learning about low-level and systems programming. I'm currently interested in Cyber Security, operating systems, and computer vison.</p>
+  </div>
 
-        <section id="experience" class="section">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Tutor | Student Learning Hub</h3>
-                <ul>
-                    <li>Tailored one-on-one tutoring sessions to match each student's learning style, simplifying complex concepts and focusing on areas of difficulty.</li>
-                    <li>Guided students through problem-solving techniques and practice exercises, leading to significant improvements in their grades—from Cs to Bs and from Bs to As.</li>
-                    <li>Collaborated with teachers to align tutoring sessions with classroom curriculum and address specific areas of difficulty.</li>
-                </ul>
-            </div>
-        </section>
+  <div class="container projects" id="projects">
+      <h2>Projects</h2>
+      <h3>Stock Trading Simulation | C++, Qt Creator</h3>
+      <img src="App.png" alt="Trading Stock Simulation" class="project-image">
+      <p>Developed a stock trading simulation application using C++ and Qt, implementing a Geometric Brownian Motion model to simulate realistic stock price movements, enhancing market trend accuracy.</p>
+      <ul>
+          <li>Engineered a trading bot with multiple strategies, including Buy and Hold, Mean Reversion, Moving Average, and Trend Following, achieving dynamic strategy execution based on real-time market events.</li>
+          <li>Designed a user-friendly graphical interface with real-time updates and interactive charts, improving user engagement and facilitating in-depth trading performance analysis.</li>
+          <li>Integrated comprehensive performance analytics, such as cumulative return, maximum drawdown, volatility, and Sharpe ratio, providing detailed insights into trading strategy effectiveness.</li>
+      </ul>
+  </div>
 
-        <section id="project" class="section">
-            <h2>Projects</h2>
-            <div class="project-item">
-                <h3><a href="https://github.com/shxhid01/TradingSimulation" target="_blank">Stock Trading Bot Simulation | C++, Qt Creator</a></h3>
-                <img src="App.png" alt="Stock Trading Bot Application" style="width: 100%; max-width: 800px; margin-bottom: 20px;">
-                <ul>
-                    <li>Developed a stock trading simulation application using C++ and Qt, implementing a Geometric Brownian Motion model to simulate realistic stock price movements, enhancing market trend accuracy.</li>
-                    <li>Engineered a trading bot with multiple strategies, including Buy and Hold, Mean Reversion, Moving Average and Trend Following, achieving dynamic strategy execution based on real-time market events.</li>
-                    <li>Designed a user-friendly graphical interface with real-time updates and interactive charts, improving user engagement and facilitating in-depth trading performance analysis.</li>
-                    <li>Integrated comprehensive performance analytics, such as cumulative return, maximum drawdown, volatility, and Sharpe ratio, providing detailed insights into trading strategy effectiveness.</li>
-                </ul>
-            </div>
-            <div class="project-item">
-                <h3><a href="https://github.com/shxhid01/Portfolio" target="_blank">E-Portfolio | HTML, CSS, GIT, FIGMA</a></h3>
-                <ul>
-                    <li>Designed and prototyped the user interface in Figma, creating a visually appealing and intuitive layout highlighting
-                        key projects, language proficiencies, and personal information.</li>
-                    <li>Applied responsive design principles using CSS, including media queries and flexible grid layouts, to ensure a
-                        seamless experience across devices and screen sizes, enhancing accessibility and user engagement</li>
-                    <li>Developed the e-portfolio using HTML and CSS, showcasing a strong web development and design foundation.</li>
-                </ul>
-            </div>
-            <div class="project-item">
-                <h3><a href="https://github.com/shxhid01/Matlab-Console-Game" target="_blank">Arcade Game | MATLAB</a></h3>
-                <ul>
-                    <li>Designed and implemented an arcade-style MATLAB application, integrating multiple mini-games such as Number
-                        Guessing, Blackjack, and Battleship, with a user-friendly menu system.</li>
-                    <li>Optimized code for efficiency and readability, ensuring smooth gameplay and ease of maintenance.</li>
-                </ul>
-            </div>
+  <div class="container extracurricular" id="extracurricular">
+      <h2>Extracurricular</h2>
+      <h3>Events Officer, Computer Science Club</h3>
+      <ul>
+          <li>Managed event logistics, communications, and ensured smooth execution, fostering community engagement.</li>
+          <li>Organized and coordinated tech-related events and workshops to foster student engagement.</li>
+      </ul>
+      <h3>Open Day Volunteer, University of Adelaide</h3>
+      <ul>
+          <li>Served as a University Ambassador for the Computer Science department, providing information and guidance to prospective students and their families.</li>
+          <li>Collaborated with faculty and staff to enhance the visitor experience, contributing to the overall recruitment efforts of the Computer Science department.</li>
+      </ul>
+  </div>
 
-        </section>
+  <div class="container contact" id="contact">
+      <h2>Contacts</h2>
+      <p>Email: <a href="mailto:Hussain@shxhid.dev">Hussain@shxhid.dev</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/shahid-hussain" target="_blank">Shahid Hussain</a></p>
+      <p>GitHub: <a href="https://github.com/shxhid01" target="_blank">shxhid01</a></p>
+      <p>Resume: <a href="Shahid Resume.pdf" download>Download Resume</a></p>
+  </div>
 
-        <section id="extracurricular" class="section">
-            <h2>Extracurricular Activities</h2>
-            <div class="extracurricular-item events-officer"> <!-- Added class here -->
-                <h3>Events Officer | Computer Science Club</h3>
-                <li>Managed event logistics, communications, and ensured smooth execution, fostering community engagement.</li>
-                <li>Organized and coordinated tech-related events and workshops to foster student engagement.</li>
-            </div>
-            <div class="extracurricular-item">
-                <h3>Open Day Volunteer | University of Adelaide</h3>
-                <ul>
-                    <li>Served as a University Ambassador for the Computer Science department, providing information and guidance to prospective students and their families.</li>
-                    <li>Collaborated with faculty and staff to enhance the visitor experience, contributing to the overall recruitment efforts of the Computer Science department.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <ul>
-                <li>Email: <a href="mailto:Shahid2677@hotmail.com">Shahid2677@hotmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/shahid-hussain-ba8baa286/" target="_blank">Shahid Hussain</a></li>
-                <li>GitHub: <a href="https://github.com/Shxhid01" target="_blank">Shxhid01</a></li>
-                <li>Discord: shxhid01</li>
-                <li>Resume: <a href="/Shahid%20Resume.pdf" target="_blank">Download Resume</a></li>
-            </ul>
-        </section>
-    </main>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
