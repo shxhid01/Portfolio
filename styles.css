@@ -61,3 +61,12 @@ li {
 h1, h2 {
   color: #E67E22;
 }
+
+.container.contact a {
+text-decoration: none;
+color: inherit; 
+}
+
+.container.contact a:hover {
+color: inherit;
+}
